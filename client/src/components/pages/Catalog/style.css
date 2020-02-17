@@ -1,0 +1,33 @@
+.containerImp {
+  height: 900px!important;
+}
+.metismenu {
+    position: fixed;
+    width: 15rem;
+    z-index: 9001;
+    bottom: 0;
+    left: 0;
+    top: 216px;
+  }
+
+.mockLogo {
+  margin-top: 10px;
+  width: 15rem;
+  position: fixed;
+  top: -9px;
+  left: 0px;
+  z-index: 9000;
+  background-color: #303336;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 32px;
+  padding-bottom: 30px;
+}
+
+#navCat {
+  background-color: #303336;
+}
+
+.light-green-darken-2 {
+  background-color: #699e00 !important;
+}

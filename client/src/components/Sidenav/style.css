@@ -1,0 +1,10 @@
+.sidebar {
+    top: 122px;
+    position: fixed;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,1)), color-stop(30%, rgba(48,51,54,1)));
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(48,51,54,1) 30%);
+    width: 240px;
+    color: white;
+    padding-bottom: 85vh;
+    height: 88%;
+}
