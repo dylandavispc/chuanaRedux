@@ -4,134 +4,135 @@ const db = require("../models");
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/chuwana-prototypeDB"
+  "mongodb://dylandavispc:Dilldill1@ds147451.mlab.com:47451/heroku_4h0dck3x"
+  // "mongodb://localhost/chuwana-prototypeDB" LOCAL CONNECTION
 );
 
 const catalogSeed = [
   {
-    name: "Jack the Ripper",
-    type: "bongs",
-    catagory: "pieces",
+    name: "Keyboard",
+    type: "keyboards",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "The Super Bowl",
-    type: "pipes",
-    catagory: "pieces",
+    name: "Monitor",
+    type: "monitors",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "Bong Wash Kit 1",
-    type: "kits",
-    catagory: "cleaners",
+    name: "SSD",
+    type: "memory",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "Chuwana Logo Sticker",
-    type: "stickers",
-    catagory: "merch",
+    name: "Office Chair",
+    type: "office",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "1Jack the Ripper",
-    type: "bongs",
-    catagory: "pieces",
+    name: "1Keyboard",
+    type: "keyboards",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "1The Super Bowl",
-    type: "pipes",
-    catagory: "pieces",
+    name: "1Monitor",
+    type: "monitors",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "1Bong Wash Kit 1",
-    type: "kits",
-    catagory: "cleaners",
+    name: "1SSD",
+    type: "memory",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "1Chuwana Logo Sticker",
-    type: "stickers",
-    catagory: "merch",
+    name: "1Office Chair",
+    type: "office",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "2Jack the Ripper",
-    type: "bongs",
-    catagory: "pieces",
+    name: "2Keyboard",
+    type: "keyboards",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "2The Super Bowl",
-    type: "pipes",
-    catagory: "pieces",
+    name: "2Monitor",
+    type: "monitors",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "2Bong Wash Kit 1",
-    type: "kits",
-    catagory: "cleaners",
+    name: "2SSD",
+    type: "memory",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "2Chuwana Logo Sticker",
-    type: "stickers",
-    catagory: "merch",
+    name: "2Office Chair",
+    type: "office",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "3Jack the Ripper",
-    type: "bongs",
-    catagory: "pieces",
+    name: "3Keyboard",
+    type: "keyboards",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "3The Super Bowl",
-    type: "pipes",
-    catagory: "pieces",
+    name: "3Monitor",
+    type: "monitors",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "3Bong Wash Kit 1",
-    type: "kits",
-    catagory: "cleaners",
+    name: "3SSD",
+    type: "memory",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
-    name: "3Chuwana Logo Sticker",
-    type: "stickers",
-    catagory: "merch",
+    name: "3Office Chair",
+    type: "office",
+    catagory: "tech",
     price: 49,
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."

@@ -59,30 +59,30 @@ class App extends Component {
           <Route exact path="/catalog" component={Catalog} />
           <Route
             exact
-            path="/catalog/bongs"
+            path="/catalog/keyboards"
             render={() => (
-              <Catalog updateUser={this.updateUser} catagory="bongs" />
+              <Catalog updateUser={this.updateUser} catagory="keyboards" />
             )}
           />
           <Route
             exact
-            path="/catalog/pipes"
+            path="/catalog/monitors"
             render={() => (
-              <Catalog updateUser={this.updateUser} catagory="pipes" />
+              <Catalog updateUser={this.updateUser} catagory="monitors" />
             )}
           />
           <Route
             exact
-            path="/catalog/stickers"
+            path="/catalog/memory"
             render={() => (
-              <Catalog updateUser={this.updateUser} catagory="stickers" />
+              <Catalog updateUser={this.updateUser} catagory="memory" />
             )}
           />
           <Route
             exact
-            path="/catalog/kits"
+            path="/catalog/office"
             render={() => (
-              <Catalog updateUser={this.updateUser} catagory="kits" />
+              <Catalog updateUser={this.updateUser} catagory="office" />
             )}
           />
           <Route

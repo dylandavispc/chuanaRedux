@@ -44,14 +44,16 @@ app.use( (req, res, next) => {
 
 app.use(routes);
 
-// Connect to the Mongo DB
-// mongoose.connect(
-//    "mongodb://dill922:Dilldill1@ds059651.mlab.com:59651/heroku_vftj295w"
-// );
-
+// Heroku Database
 mongoose.connect(
-  "mongodb://localhost/chuwana-prototypeDB"
-)
+  //  "mongodb://dill922:Dilldill1@ds059651.mlab.com:59651/heroku_vftj295w" OLD DATABASE
+   "mongodb://dylandavispc:Dilldill1@ds147451.mlab.com:47451/heroku_4h0dck3x"
+);
+
+// Local Database
+// mongoose.connect(
+//   "mongodb://localhost/chuwana-prototypeDB"
+// )
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

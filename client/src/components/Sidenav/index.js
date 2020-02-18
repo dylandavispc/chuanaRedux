@@ -25,6 +25,7 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
     }
   }
 
+  
   let expandIcon;
 
   if (Array.isArray(items) && items.length) {
@@ -81,18 +82,28 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
 }
 
 function Sidebar({ items, depthStep, depth, expanded }) {
+    function ListItemLink(props) {
+        return <ListItem button component="a" {...props} />;
+    }
+    
   return (
     <div className="sidebar">
       <List disablePadding dense>
-      <ListItem button>
-        <ListItemText>Home</ListItemText>
-      </ListItem>
-      <ListItem button>
-        <ListItemText>Billing</ListItemText>
-      </ListItem>
-      <ListItem button>
-        <ListItemText>Settings</ListItemText>
-      </ListItem>
+      <ListItemLink href="/catalog/">
+        <ListItemText>All</ListItemText>
+      </ListItemLink>
+      <ListItemLink href="/catalog/keyboards">
+        <ListItemText>Keyboards</ListItemText>
+      </ListItemLink>
+      <ListItemLink href="/catalog/monitors">
+        <ListItemText>Monitors</ListItemText>
+      </ListItemLink>
+      <ListItemLink href="/catalog/memory">
+        <ListItemText>HDD / SDD</ListItemText>
+      </ListItemLink>
+      <ListItemLink href="/catalog/office">
+        <ListItemText>Office Supplies</ListItemText>
+      </ListItemLink>
     </List>
     </div>
   );

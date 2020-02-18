@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Redirect } from "react-router-dom";
@@ -27,239 +27,6 @@ import {
 import MetisMenu from "react-metismenu";
 import Footer from "../../Footer";
 import { CatalogCards, CatalogList } from "../../CatalogCards";
-const content = [
-  {
-    icon: "icon-class-name",
-    label: "Account Page",
-    to: "/catalog"
-  },
-  {
-    icon: "icon-class-name",
-    label: "Bongs",
-    content: [
-      {
-        icon: "icon-class-name",
-        label: "Carburetor Bongs",
-        to: "/catalog/bongs"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Multi-Chamber Bong",
-        to: "/catalog/bongs"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Percolator Bong",
-        to: "/catalog/bongs"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Gravity bongs",
-        to: "/catalog/bongs"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Novelty Bongs",
-        to: "/catalog/bongs"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Cleaning",
-        to: "/catalog/bongs"
-      }
-    ]
-  },
-  {
-    icon: "icon-class-name",
-    label: "Dab Rigs",
-    content: [
-      {
-        icon: "icon-class-name",
-        label: "Rigs",
-        to: "/catalog/kits"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Novelty Rigs",
-        to: "/catalog/kits"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Nails",
-        to: "/catalog/kits"
-      },
-      {
-        icon: "icon-class-name",
-        label: "E-nails & E-rigs",
-        to: "/catalog/kits"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Dabbers",
-        to: "/catalog/kits"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Dabbing Adapters",
-        to: "/catalog/kits"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Torches",
-        to: "/catalog/kits"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Extractors",
-        to: "/catalog/kits"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Cleaning",
-        to: "/catalog/kits"
-      }
-    ]
-  },
-  {
-    icon: "icon-class-name",
-    label: "Vaporizors",
-    content: [
-      {
-        icon: "icon-class-name",
-        label: "Dry Herb Vaporizers",
-        to: "/catalog/stickers"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Wax & Oil Vapes",
-        to: "/catalog/stickers"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Vape Batteries",
-        to: "/catalog/stickers"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Atomizers & Cartridges",
-        to: "/catalog/stickers"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Infusers & Extractors",
-        to: "/catalog/stickers"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Vape Accessories",
-        to: "/catalog/stickers"
-      }
-    ]
-  },
-  {
-    icon: "icon-class-name",
-    label: "Pipes",
-    content: [
-      {
-        icon: "icon-class-name",
-        label: "Bowls",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Bubblers",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Chillums & Dugouts",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Glass Blunts",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Novelty Pipes",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Pipe Accessories",
-        to: "/catalog/pipes"
-      }
-    ]
-  },
-  {
-    icon: "icon-class-name",
-    label: "Rolling Supplies",
-    content: [
-      {
-        icon: "icon-class-name",
-        label: "Rolling Papers",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Blunt Wraps",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Rolling Trays",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Rolling Machines",
-        to: "/catalog/pipes"
-      }
-    ]
-  },
-  {
-    icon: "icon-class-name",
-    label: "Accessories",
-    content: [
-      {
-        icon: "icon-class-name",
-        label: "Grinders",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Lighters & Hempwick",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Candles & Odor Eliminators",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Scales",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Smell Proof Storage",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Ashtrays",
-        to: "/catalog/pipes"
-      },
-      {
-        icon: "icon-class-name",
-        label: "Travel Bags & Cases",
-        to: "/catalog/pipes"
-      }
-    ]
-  }
-];
 
 class Catalog extends React.Component {
   constructor(props) {
@@ -270,7 +37,7 @@ class Catalog extends React.Component {
       breakWidth: 1300,
       windowWidth: 0,
       redirectTo: null,
-      catalog: "bongs",
+      filter: null,
       products: [],
       filteredProducts: []
     };
@@ -374,7 +141,7 @@ class Catalog extends React.Component {
               className="mockLogo"
               src={logo}
             />
-            <Sidenav />
+            <Sidenav filter/>
             <Navbar />
             <main style={mainStyle}>
               <MDBContainer fluid style={{ height: 2000 }} className="mt-5 containerImp">
