@@ -42,7 +42,7 @@ class Login extends Component {
           });
           // update the state to redirect to home
           this.setState({
-            redirectTo: "/catalog"
+            redirectTo: "/catalog/all"
           });
         }
       })
