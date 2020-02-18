@@ -89,7 +89,7 @@ function Sidebar({ items, depthStep, depth, expanded }) {
   return (
     <div className="sidebar">
       <List disablePadding dense>
-      <ListItemLink href="/catalog/">
+      <ListItemLink href="/catalog/all">
         <ListItemText>All</ListItemText>
       </ListItemLink>
       <ListItemLink href="/catalog/keyboards">

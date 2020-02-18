@@ -56,7 +56,13 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Landing} />
           <Route exact path="/home" component={Home} />
-          <Route exact path="/catalog" component={Catalog} />
+          <Route
+            exact
+            path="/catalog/all"
+            render={() => (
+              <Catalog updateUser={this.updateUser} catagory="all" />
+            )}
+          />
           <Route
             exact
             path="/catalog/keyboards"

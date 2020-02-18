@@ -2,9 +2,9 @@ import React from "react";
 import "./style.css"
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
-const Footer = () => {
+const LandingFooter = () => {
   return (
-    <MDBFooter color="black" className="font-small pt-4 mt-4">
+    <MDBFooter color="black" className=" landing-footer font-small pt-4 mt-4">
       {/* <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
@@ -42,4 +42,4 @@ const Footer = () => {
   );
 }
 
-export default Footer;
+export default LandingFooter;

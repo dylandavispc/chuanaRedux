@@ -58,7 +58,7 @@ class Landing extends Component {
           </div>
         </div> */}
         </div>
-        {/* <LandingFooter /> */}
+        <LandingFooter />
       </div>
     );
   }

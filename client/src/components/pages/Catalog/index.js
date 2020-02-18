@@ -60,6 +60,7 @@ class Catalog extends React.Component {
     console.log("filtering...");
     // console.log(products)y
     var type = [this.props.catagory];
+    console.log(type)
     var records = this.state.products;
     var typeObj = {};
     type.forEach(function(element) {
@@ -70,8 +71,14 @@ class Catalog extends React.Component {
       if (typeObj[element.type]) filteredArray.push(element);
     });
     // console.log(filteredArray)
-    this.setState({ filteredProducts: filteredArray });
-    console.log(this.state.filteredProducts);
+    if (type[0] === "all") {
+      this.setState({ filteredProducts: records })
+      console.log(this.state.filteredProducts)
+    } else {
+      this.setState({ filteredProducts: filteredArray });
+    }
+    // this.setState({ filteredProducts: filteredArray });
+    // console.log(this.state.filteredProducts);
     console.log("filter complete!");
   };
   loadProducts = () => {

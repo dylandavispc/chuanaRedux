@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import axios from 'axios'
 import {
   MDBInput,
   MDBNavbar,
@@ -25,6 +27,22 @@ state = {
 
 toggleCollapse = () => {
   this.setState({ isOpen: !this.state.isOpen });
+}
+
+logout(event) {
+  event.preventDefault()
+  console.log('logging out')
+  axios.post('/user/logout').then(response => {
+    console.log(response.data)
+    if (response.status === 200) {
+      this.props.updateUser({
+        loggedIn: false,
+        username: null
+      })
+    }
+  }).catch(error => {
+      console.log('Logout error')
+  })
 }
 
 render() {
@@ -97,8 +115,8 @@ render() {
                       <MDBDropdownItem href="#!">
                         Account Settings
                       </MDBDropdownItem>
-                      <MDBDropdownItem onClick={this.logout}>
-                        Logout
+                      <MDBDropdownItem href="#/login" onClick={this.logout}>
+                        <Link to="/"  onClick={() => setTimeout(function() {window.location.reload()}, 500)}>logout</Link>
                       </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
