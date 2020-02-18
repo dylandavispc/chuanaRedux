@@ -66,7 +66,7 @@ class LandingHeader extends React.Component {
             <MDBMask overlay="purple-light" className="flex-center flex-column text-white text-center">
               <h2>Welcome to Chuana</h2>
               <h5>Store-to-Store E-Commerce Platform</h5><br />
-              <p>Login or register to the </p><br />
+              <p>Login or register! </p><br />
             </MDBMask>
           </MDBView>
         </header>
